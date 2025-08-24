@@ -3,8 +3,7 @@
         {
             "name": "Windows",
             "includePath": [
-                "${workspaceFolder}",
-                "${workspaceFolder}\\build\\_deps\\sdl3-src\\**"
+                "${workspaceFolder}\\build\\vcpkg_installed\\x64-windows\\include\\**"
             ],
             "defines": [
                 "__WXMSW__",

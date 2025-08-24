@@ -4,8 +4,7 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "cmake",
-            "args": ["--build", "build", "-j" ],
+            "command": "cmake --build build",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -15,8 +14,7 @@
         {
             "label": "Configure",
             "type": "shell",
-            "command": "cmake",
-            "args": ["-DCMAKE_BUILD_TYPE=Debug", "-S.", "-Bbuild" ]
+            "command": "cmake -S. -Bbuild --preset windows"
         }
     ]
 }

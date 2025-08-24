@@ -6,7 +6,7 @@
             "name": "Run Application",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\build\\Debug\\main.exe",
+            "program": "${workspaceFolder}\\build\\main.exe",
             "preLaunchTask": "Build"
         }
     ]

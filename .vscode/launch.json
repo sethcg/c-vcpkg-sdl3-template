@@ -7,7 +7,7 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}\\build\\Debug\\main.exe",
-            "preLaunchTask": "Build with CMake"
+            "preLaunchTask": "Build"
         }
     ]
 }

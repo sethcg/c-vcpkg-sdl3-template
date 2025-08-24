@@ -1,31 +1,31 @@
-# Prerequisites
+# PREREQUISITES
 *.d
 
-# Compiled Object files
+# COMPILED OBJECT FILES
 *.slo
 *.lo
 *.o
 *.obj
 
-# Precompiled Headers
+# PRECOMPILED HEADERS
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
+# COMPILED DYNAMIC LIBRARIES
 *.so
 *.dylib
 *.dll
 
-# Compiled Static libraries
+# COMPILED STATIC LIBRARIES
 *.lai
 *.la
 *.a
 *.lib
 
-# Executables
+# EXECUTABLES
 *.exe
 *.out
 *.app
 
-# Build output
+# BUILD FOLDER
 /build

@@ -24,6 +24,9 @@
 # CLONE REPOSITORY WITH VCPKG SUBMODULE
 git clone --recurse-submodules https://github.com/sethcg/c-vcpkg-sdl3-template.git
 
+# INITIALIZE VCPKG SUBMODULE
+git submodule update --init --recursive
+
 ```
 
 #### Build Commands:

@@ -22,7 +22,7 @@
 ```bash
 
 # CLONE REPOSITORY WITH VCPKG SUBMODULE
-git clone --recurse-submodules https://github.com/sethcg/vscode-vcpkg-sdl3-template.git
+git clone --recurse-submodules https://github.com/sethcg/c-vcpkg-sdl3-template.git
 
 ```
 

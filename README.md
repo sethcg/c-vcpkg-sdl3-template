@@ -3,7 +3,7 @@
 ### Description:
 
 <dl>
-    <dd>Template for setting up a Visual Studio Code development environment with C, Vcpkg, and SDL3.
+    <dd>Template for setting up a Visual Studio Code development environment with C, Vcpkg, SDL3, and Google Test.
         <br/>
         <em><b>(Windows only)</b></em>
     </dd>
@@ -14,6 +14,7 @@
 - [x] Vcpkg
 - [x] CMake
 - [x] SDL3
+- [x] GTest
 
 ---
 
@@ -37,10 +38,13 @@ git submodule update --init --recursive
 ```bash
 
 # CONFIGURE
-cmake -S. -Bbuild --preset windows
+cmake --preset default
 
 # BUILD
-cmake --build build
+cmake --build --preset default
+
+# RUN TESTS
+ctest --preset default
 
 ```
 

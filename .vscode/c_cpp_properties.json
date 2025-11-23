@@ -3,7 +3,10 @@
         {
             "name": "Windows",
             "includePath": [
-                "${workspaceFolder}\\build\\vcpkg_installed\\x64-windows\\include\\**"
+                "${workspaceFolder}\\core\\include\\**",
+                "${workspaceFolder}\\test\\include\\**",
+                "${workspaceFolder}\\build\\default\\_deps\\**",
+                "${workspaceFolder}\\build\\default\\vcpkg_installed\\x64-windows\\include\\**"
             ],
             "defines": [
                 "__WXMSW__",

@@ -1,4 +1,5 @@
 #define SDL_MAIN_USE_CALLBACKS 1 // USE CALLBACKS INSTEAD OF THE "main()" FUNCTION
+
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 
@@ -7,8 +8,6 @@
 
 // THIS FUNCTION RUNS ONCE AT STARTUP
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]) {
-    SDL_SetAppMetadata("Example Renderer Clear", "1.0", "com.example.renderer-clear");
-
     if (!SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS)) {
         SDL_LogError(SDL_LOG_CATEGORY_CUSTOM, "Error %s", SDL_GetError());
         return SDL_APP_FAILURE;

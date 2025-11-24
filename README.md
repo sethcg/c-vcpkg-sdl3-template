@@ -3,13 +3,11 @@
 ### Description:
 
 <dl>
-    <dd>Template for setting up a Visual Studio Code development environment with C, Vcpkg, SDL3, and Google Test.
-        <br/>
-        <em><b>(Windows only)</b></em>
-    </dd>
+    <dd>Template for setting up a Visual Studio Code development environment with C, Vcpkg, SDL3, and Google Test.</dd>
 </dl>
 
 #### Features:
+
 - [x] VSCODE
 - [x] Vcpkg
 - [x] CMake
@@ -53,9 +51,7 @@ ctest --preset default
 <br/>
 
 > [!WARNING]
-> This template does not cover many of the possible use-cases by default.
-> </br>
-> And is not actively maintained, so I encourage you to clone and change the code to suite your needs.
+> This template does not cover many of the possible use-cases by default. And is not actively maintained.
 
 </br>
 

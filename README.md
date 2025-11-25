@@ -3,7 +3,7 @@
 ### Description:
 
 <dl>
-    <dd>Template for setting up a Visual Studio Code development environment with C, Vcpkg, SDL3, and Google Test.</dd>
+    <dd>Template for setting up a Visual Studio Code development environment with C/C++, Vcpkg, SDL3, and Google Test.</dd>
 </dl>
 
 #### Features:

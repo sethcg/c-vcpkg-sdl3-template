@@ -6,6 +6,8 @@
 #define WINDOW_WIDTH 480
 #define WINDOW_HEIGHT 640
 
+#define MINIMUM_WINDOW_WIDTH 240
+#define MINIMUM_WINDOW_HEIGHT 320
 
 typedef struct {
     SDL_Window* window;

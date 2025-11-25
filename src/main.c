@@ -21,10 +21,13 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[]) {
     }
     *appstate = appContext;
 
-    if (!SDL_CreateWindowAndRenderer("examples/renderer/clear", WINDOW_HEIGHT, WINDOW_WIDTH, 0, &appContext->window, &appContext->renderer)) {
+    if (!SDL_CreateWindowAndRenderer("Example Window", WINDOW_HEIGHT, WINDOW_WIDTH, 0, &appContext->window, &appContext->renderer)) {
         SDL_LogError(SDL_LOG_CATEGORY_CUSTOM, "Error %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
+
+    SDL_SetWindowResizable(appContext->window, true);
+    SDL_SetWindowMinimumSize(appContext->window, MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT);
 
     return SDL_APP_CONTINUE;
 }
@@ -43,12 +46,13 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event) {
 SDL_AppResult SDL_AppIterate(void *appstate) {
     AppContext* appContext = (AppContext*) appstate;
 
+    // CHOOSE NEW COLOR FOR THE FRAME.
+    // SINE WAVE TRICK ALLOWS FOR SMOOTH FADING
     const double currentTime = ((double)SDL_GetTicks()) / 1000.0;
+    const rgb_color color = GetColor(currentTime);
 
-    // CHOOSE NEW COLOR FOR THE FRAME. SINE WAVE TRICK MAKES IT FADE SMOOTHLY
-    rgb_color color = GetColor(currentTime);
+    // RENDER
     SDL_SetRenderDrawColorFloat(appContext->renderer, color.r, color.g, color.b, SDL_ALPHA_OPAQUE_FLOAT);
-
     SDL_RenderClear(appContext->renderer);
     SDL_RenderPresent(appContext->renderer);
 

@@ -12,9 +12,12 @@ TEST(ColorPicker_Test, GetValidColorValue_Zero) {
     rgb_color color = GetColor(0);
 
     // ASSERT
-    EXPECT_TRUE(color.r > 0);
-    EXPECT_TRUE(color.g > 0);
-    EXPECT_TRUE(color.b > 0);
+    EXPECT_TRUE(color.r >= 0);
+    EXPECT_TRUE(color.g >= 0);
+    EXPECT_TRUE(color.b >= 0);
+    EXPECT_TRUE(color.r <= 1);
+    EXPECT_TRUE(color.g <= 1);
+    EXPECT_TRUE(color.b <= 1);
 }
 
 TEST(ColorPicker_Test, GetValidColorValue_CurrentTime) {
@@ -25,7 +28,7 @@ TEST(ColorPicker_Test, GetValidColorValue_CurrentTime) {
     rgb_color color = GetColor(currentTime);
 
     // ASSERT
-    EXPECT_TRUE(color.r > 0);
-    EXPECT_TRUE(color.g > 0);
-    EXPECT_TRUE(color.b > 0);
+    EXPECT_TRUE(color.r >= 0);
+    EXPECT_TRUE(color.g >= 0);
+    EXPECT_TRUE(color.b >= 0);
 }

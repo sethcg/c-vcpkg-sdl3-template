@@ -3,16 +3,19 @@
 ### Description:
 
 <dl>
-    <dd>Template for setting up a Visual Studio Code development environment with C/C++, Vcpkg, SDL3, and Google Test.</dd>
+<dd>
+    Template for setting up a Visual Studio Code development environment with C/C++, Vcpkg, SDL3, and Google Test. (Minimum ImGui 'C' wrapper)
+</dd>
 </dl>
 
 #### Features:
 
 - [x] VSCODE
-- [x] Vcpkg
 - [x] CMake
+- [x] Vcpkg
 - [x] SDL3
-- [x] GTest
+- [x] ImGui
+- [x] Google Test
 
 ---
 
@@ -21,10 +24,7 @@
 ```bash
 
 # CLONE REPOSITORY WITH VCPKG SUBMODULE
-git clone --recurse-submodules https://github.com/sethcg/c-vcpkg-sdl3-template.git
-
-# INITIALIZE VCPKG SUBMODULE
-git submodule update --init --recursive
+git clone --recursive https://github.com/sethcg/c-vcpkg-sdl3-template.git
 
 ```
 
@@ -38,11 +38,12 @@ git submodule update --init --recursive
 # CONFIGURE
 cmake --preset default
 
-# BUILD
-cmake --build --preset default
+# BUILD DEBUG (RUN TESTS)
+cmake --build --preset debug
+ctest --preset debug
 
-# RUN TESTS
-ctest --preset default
+# BUILD RELEASE
+cmake --build --preset release
 
 ```
 
